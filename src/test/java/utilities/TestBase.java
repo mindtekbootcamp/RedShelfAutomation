@@ -8,12 +8,12 @@ public class TestBase {
 
     protected WebDriver driver;
 
-    @BeforeMethod(groups = {"regression","smoke"})
+    @BeforeMethod
     public void setUp(){
         driver = Driver.getDriver();
     }
 
-    @AfterMethod(groups = {"regression","smoke"})
+    @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
         driver.quit();
